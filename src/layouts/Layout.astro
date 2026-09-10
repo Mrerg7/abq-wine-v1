@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const POSTER =
+  'https://customer-wa9cpywo3l4jte5c.cloudflarestream.com/eb1094425ef3e52ec490f6c5676dccaf/thumbnails/thumbnail.jpg?time=&height=600';
+
+const {
+  title = 'ABQ.Wine | Albuquerque Wine Brand',
+  description = 'Albuquerque wine brand concept for tasting rooms, shops, and New Mexico vineyards. Domain available for acquisition.',
+  ogImage = POSTER,
+  canonical = 'https://abq.wine/',
+} = Astro.props;
+
+const siteName = 'ABQ.Wine';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href={canonical} />
+    <meta name="google-site-verification" content="hbVQ42y65GlZDJesVGHAZT5w1FDp58uAPhcm2c8HvHk" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#2c1018" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": siteName,
+      "url": "https://abq.wine",
+      "description": description
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": title,
+      "description": description,
+      "url": canonical,
+      "primaryImageOfPage": { "@type": "ImageObject", "url": ogImage },
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10"
+    })} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>
