@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const STREAM_SRC =
+  'https://customer-wa9cpywo3l4jte5c.cloudflarestream.com/eb1094425ef3e52ec490f6c5676dccaf/iframe?muted=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-wa9cpywo3l4jte5c.cloudflarestream.com%2Feb1094425ef3e52ec490f6c5676dccaf%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false';
+---
+
+<Layout>
+  <Header />
+
+  <main class="flex-1">
+    <section class="relative bg-wine-950">
+      <div class="relative w-full" style="padding-top: 54.32098765432099%;">
+        <iframe
+          src={STREAM_SRC}
+          title="ABQ.Wine hero video"
+          loading="lazy"
+          style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allowfullscreen="true"
+        ></iframe>
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/55 to-wine-950/20"></div>
+        <div class="absolute inset-0 flex items-end">
+          <div class="container-narrow w-full pb-6 pt-16 sm:pb-10 sm:pt-20">
+            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-300 sm:mb-3 sm:text-xs">
+              Albuquerque · Vineyard · Tasting Room · Shop
+            </p>
+            <h1 class="font-display text-4xl font-semibold leading-none text-white sm:text-6xl lg:text-7xl">
+              ABQ<span class="text-gold-300">.Wine</span>
+            </h1>
+            <p class="mt-3 max-w-xl text-sm leading-relaxed text-wine-100/90 sm:mt-5 sm:text-lg">
+              A short domain for wine brands, tasting rooms, and shops in the high desert.
+            </p>
+            <div class="mt-5 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:gap-3">
+              <a href="#pour" class="btn-primary pointer-events-auto">Explore the Brand</a>
+              <a href="#acquisition" class="btn-secondary pointer-events-auto">Domain Available</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pour" class="section-padding bg-white">
+      <div class="container-narrow">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-3xl font-semibold text-wine-950 sm:text-4xl">What the name holds</h2>
+          <p class="mt-4 text-base text-wine-800 sm:text-lg">
+            Wine in New Mexico is altitude, sun, and cool nights. The brand has to work on a bottle, a window, and a reservation link.
+          </p>
+        </div>
+        <div class="mt-10 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-3">
+          <article class="card">
+            <h3 class="font-display text-xl font-semibold text-wine-950">Tasting room</h3>
+            <p class="mt-2 text-sm leading-relaxed text-wine-700">Flights, pours, and patio hours. A name that fits a sandwich board and a maps listing.</p>
+          </article>
+          <article class="card">
+            <h3 class="font-display text-xl font-semibold text-wine-950">Shop</h3>
+            <p class="mt-2 text-sm leading-relaxed text-wine-700">Retail, clubs, and local allocation. City plus category on the bag.</p>
+          </article>
+          <article class="card">
+            <h3 class="font-display text-xl font-semibold text-wine-950">Vineyard</h3>
+            <p class="mt-2 text-sm leading-relaxed text-wine-700">High-desert fruit and a regional label that already says where it comes from.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="place" class="section-padding bg-wine-50">
+      <div class="container-narrow grid gap-10 lg:grid-cols-2 lg:items-start">
+        <div>
+          <h2 class="font-display text-3xl font-semibold text-wine-950 sm:text-4xl">High-desert wine country</h2>
+          <p class="mt-4 text-base text-wine-800 sm:text-lg">
+            Albuquerque sits near one of the oldest winegrowing regions in the United States. Visitors already search by city. The domain matches that habit.
+          </p>
+          <ul class="mt-8 space-y-4 text-sm text-wine-800 sm:text-base">
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold-500"></span><span><strong class="text-wine-950">Local intent</strong> — ABQ plus wine is how guests look for a tasting room.</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold-500"></span><span><strong class="text-wine-950">Altitude fruit</strong> — intense sun and cool nights shape New Mexico wine.</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold-500"></span><span><strong class="text-wine-950">Hospitality fit</strong> — works for a shop, a room, or a multi-site group.</span></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-wine-100 bg-white p-5 sm:p-8">
+          <dl class="space-y-5">
+            <div class="flex items-baseline justify-between gap-4 border-b border-wine-100 pb-4">
+              <dt class="text-sm text-wine-600">Market</dt>
+              <dd class="font-display text-xl font-semibold text-wine-800 sm:text-2xl">Albuquerque</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4 border-b border-wine-100 pb-4">
+              <dt class="text-sm text-wine-600">Elevation</dt>
+              <dd class="font-display text-xl font-semibold text-wine-800 sm:text-2xl">~5,300 ft</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4 border-b border-wine-100 pb-4">
+              <dt class="text-sm text-wine-600">Brand fit</dt>
+              <dd class="font-display text-xl font-semibold text-wine-800 sm:text-2xl">Room · Shop · Vine</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="text-sm text-wine-600">TLD</dt>
+              <dd class="font-display text-xl font-semibold text-wine-800 sm:text-2xl">.wine</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand" class="section-padding bg-white">
+      <div class="container-narrow max-w-3xl">
+        <h2 class="font-display text-3xl font-semibold text-wine-950 sm:text-4xl">Why this domain</h2>
+        <div class="mt-6 space-y-4 text-sm leading-relaxed text-wine-800 sm:text-base">
+          <p>
+            <strong class="text-wine-950">ABQ.Wine</strong> is city plus category on a purpose-built TLD. It reads cleanly on a bottle, a window, and a search result.
+          </p>
+          <p>
+            Available for a tasting room, retailer, vineyard, or hospitality group expanding in New Mexico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-wine-100 bg-wine-50 py-10 sm:py-12">
+      <div class="container-narrow text-center">
+        <p class="mx-auto max-w-2xl text-xs leading-relaxed text-wine-600 sm:text-sm">
+          Information presented is for demonstration and educational purposes only and does not constitute an offer of wine, retail, or hospitality services.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
