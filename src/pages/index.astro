@@ -12,18 +12,24 @@ const STREAM_SRC =
 
   <main class="flex-1">
     <section class="relative bg-wine-950">
-      <div class="relative w-full" style="padding-top: 54.32098765432099%;">
-        <iframe
-          src={STREAM_SRC}
-          title="ABQ.Wine hero video"
-          loading="lazy"
-          style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
-          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-          allowfullscreen="true"
-        ></iframe>
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/55 to-wine-950/20"></div>
-        <div class="absolute inset-0 flex items-end">
-          <div class="container-narrow w-full pb-6 pt-16 sm:pb-10 sm:pt-20">
+      <div class="relative">
+        {/* Mobile: tall full-bleed stream with light veil. Desktop: 16:9 aspect with text overlay. */}
+        <div class="relative w-full overflow-hidden max-sm:min-h-[58vh] sm:pt-[54.32098765432099%]">
+          <iframe
+            src={STREAM_SRC}
+            title="ABQ.Wine hero video"
+            loading="lazy"
+            class="absolute inset-0 h-full w-full border-0"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+            allowfullscreen="true"
+          ></iframe>
+          <div
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-wine-950/50 via-transparent to-wine-950/25 sm:from-wine-950 sm:via-wine-950/55 sm:to-wine-950/20"
+          ></div>
+        </div>
+        {/* Below video on mobile so the stream stays visible; overlaid on sm+ */}
+        <div class="relative sm:absolute sm:inset-0 sm:flex sm:items-end">
+          <div class="container-narrow w-full pb-8 pt-6 sm:pb-10 sm:pt-20">
             <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-300 sm:mb-3 sm:text-xs">
               Albuquerque · Vineyard · Tasting Room · Shop
             </p>
